@@ -1,0 +1,795 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img,
+video,
+iframe {
+    align-items: center;
+}
+
+/*FONTS*/
+.josefin-sans {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.unifrakturmaguntia-regular {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.scrollable-element {
+    scrollbar-color: red;
+}
+
+/*FONTS*/
+body {
+    min-width: 1600px;
+    font-size: 20px;
+    line-height: normal;
+    font-family: "Josefin Sans", sans-serif;
+    color: #121212;
+    background-image: url(../images/paper_bg.png);
+}
+
+/*HEADER*/
+header {
+    color: #eaeaea;
+    height: 150px;
+    width: 100%;
+    position: relative;
+
+}
+
+.header_inner {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.right_header ul {
+    display: flex;
+
+}
+
+.right_header ul li {
+    padding-right: 60px;
+}
+
+.left_header ul {
+    display: flex;
+
+}
+
+.left_header ul li {
+    padding-right: 60px;
+}
+
+
+.icons_header {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+}
+
+.icons_header ul {
+    display: flex;
+    padding-right: 80px;
+}
+
+.icons_header ul li {
+    padding-right: 25px;
+}
+
+.right_header ul li a:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 3px #9a0404;
+    transition: all 0.5s;
+}
+
+.left_header ul li a:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 3px #9a0404;
+    transition: all 0.5s;
+}
+
+.cart {
+    position: relative;
+}
+
+.login {
+    position: relative;
+}
+
+.icons_header ul li {
+    position: relative;
+}
+
+.icons_header ul li :hover .hover {
+    opacity: 1;
+}
+
+.login:hover .hover {
+    opacity: 1;
+}
+
+.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+/*MAIN BANNER*/
+.main_banner {
+    background-image: url(../images/gradation-01.jpg);
+    height: 950px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #121212;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #9a0404;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #121212;
+    /* creates padding around scroll thumb */
+}
+
+/*ANIMATIONS*/
+@keyframes text_animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes up_and_down {
+    0% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* Flickering animation */
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #ffffff,
+            0 0 40px #ffffff,
+            0 0 80px #000000,
+            0 0 90px #000000,
+            0 0 100px #000000,
+            0 0 150px #000000;
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+
+/*ANIMATIONS*/
+.text_slide {
+    overflow: hidden;
+}
+
+.text_wrapper {
+    display: flex;
+    width: 10000px;
+    animation: text_animation 50s linear infinite;
+}
+
+.text_box {
+    display: flex;
+    width: 5000px;
+    justify-content: space-around;
+}
+
+.text_box span {
+    font-family: "UnifrakturMaguntia", cursive;
+}
+
+.text_box h1 {
+    color: #eaeaea;
+    -webkit-text-stroke: 2px #2c2c2c;
+    font-size: 100px;
+    font-weight: 20;
+    font-family: "UnifrakturMaguntia", cursive;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    padding-bottom: 15px;
+}
+
+.main_banner {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.LP-record {
+    animation: rotation 7s linear infinite;
+}
+
+/*RESERVATION*/
+.reservation {
+    width: 1520px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.gif {
+    width: 1000px;
+    position: relative;
+}
+
+
+.logo {
+    position: relative;
+    bottom: 700px;
+    left: 750px;
+    width: 200px;
+    animation: up_and_down 2s linear infinite;
+}
+
+.reservation_text {
+    align-content: center;
+    line-height: 30px;
+}
+
+.reservation_text h4 {
+    font-size: 20px;
+}
+
+.reservation_btn {
+    margin-top: 40px;
+}
+
+.reservation_btn a {
+    width: 150px;
+
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.reservation_btn a:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 5px #9a0404;
+}
+
+.slogan {
+    position: relative;
+    top: -320px;
+
+}
+
+.slogan h1 {
+    position: absolute;
+    color: #2c2c2c;
+    -webkit-text-stroke: 0.5px #eaeaea;
+    font-size: 120px;
+    font-family: "UnifrakturMaguntia", cursive;
+    text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.8);
+}
+
+/*NEW RELEASE*/
+.new_release {
+    width: 1520px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.new_release h1 {
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+.new_release p {
+    text-align: right;
+    line-height: 30px;
+    font-size: 24px;
+}
+
+.metro h2 {
+    writing-mode: vertical-lr;
+    padding-left: 40px;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-size: 80px;
+    animation: flicker 1.3s infinite alternate;
+
+}
+
+.metro {
+    display: flex;
+    margin-top: 20px;
+
+}
+
+
+.metro_sticker {
+    width: 1100px;
+    align-content: end;
+    padding-left: 200px;
+    padding-top: 50px;
+
+}
+
+.metro1 {
+    position: relative;
+    margin-left: 70px;
+    width: 530px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.metro2 {
+    position: relative;
+    top: 100px;
+    left: -700px;
+    width: 400px;
+    animation: up_and_down 2s linear infinite;
+}
+
+.metro3 {
+    position: relative;
+    top: -350px;
+    right: -200px;
+    width: 400px;
+    animation: up_and_down 2s linear infinite;
+}
+
+
+
+.doja_sticker {
+    width: 1100px;
+    align-content: end;
+    padding-left: 200px;
+
+}
+
+.doja_sticker h1 {
+    text-align: left;
+    margin-bottom: 40px;
+
+}
+
+.doja {
+    display: flex;
+
+}
+
+.doja1 {
+    position: relative;
+    height: 600px;
+    width: 500px;
+}
+
+.doja2 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 400px;
+    left: -550px;
+    animation: up_and_down 2s linear infinite;
+}
+
+.doja3 {
+    position: relative;
+    top: 350px;
+    left: -300px;
+    width: 240px;
+    height: 300px;
+    animation: up_and_down 2s linear infinite;
+
+}
+
+.spider {
+    position: relative;
+    top: -80px;
+    left: -300px;
+    height: 450px;
+}
+
+/*EVENT*/
+.event_text {
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+
+
+
+
+.text_box2 {
+    display: flex;
+    width: 5000px;
+    justify-content: space-around;
+}
+
+.bg_event {
+    height: 900px;
+    background-image: url(../images/boysdontcry_dark.jpg);
+    background-attachment: fixed;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.bg_event img {
+    margin-left: 150px;
+}
+
+.hashtag_box {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: #eaeaea;
+    margin: 0 auto;
+
+}
+
+.hashtag1 h1 a:hover {
+    text-shadow: 6px 6px 6px #33ff00;
+
+
+}
+
+.hashtag2 h1 a:hover {
+    text-shadow: 6px 6px 6px #33ff00;
+}
+
+.hashtag_box h1 a {
+    padding: 20px;
+    border: 4px solid #00ff0d;
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+    font-style: italic;
+    margin: 30px;
+
+
+}
+
+.hashtag_box h1 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.bg_event h4 {
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+/*POPULAT NOW*/
+.popular_now_box {
+    width: 1520px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.popular_now_box h1 {
+    font-family: "UnifrakturMaguntia", cursive;
+    text-align: center;
+    font-size: 50px;
+}
+
+.swiper-slide {
+    text-align: center;
+}
+
+.swiper-slide p {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.swiper-slide a {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 30px 30px 30px 30px;
+    width: 160px;
+}
+
+
+
+.swiper-slide a:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 5px #9a0404;
+    transition: all 0.3s
+}
+
+
+.popular_now {
+    display: flex;
+    justify-content: space-between;
+}
+
+.album_cover {
+    transition: all 0.3s;
+
+}
+
+.album_cover:hover {
+    transform: skewX(20deg);
+}
+
+/*MERCHANDISE*/
+.merchandise_bg {
+    background-image: url(../images/bg_attachment-ed3.jpg);
+    background-attachment: fixed;
+    height: 300px;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 50px;
+}
+
+.merchandise_bg h1 {
+    font-family: "UnifrakturMaguntia", cursive;
+    text-align: center;
+    font-size: 80px;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}
+
+.merchandise {
+    width: 1520px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.merchandise h3 {
+    padding-bottom: 15px;
+}
+
+.merch:hover {
+    transform: translateY(-15px);
+    transition: all 0.3s;
+
+}
+
+.shop_button {
+    margin: 0 auto;
+    align-content: center;
+    text-align: center;
+}
+
+.shop_button a {
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 30px 30px 30px 30px;
+    font-style: italic;
+    width: 100px;
+    margin: 0 auto;
+}
+
+.shop_button a:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 5px #9a0404;
+    border: 2px solid #9a0404;
+    transition: all 0.5s
+}
+
+.TV {
+    width: 1520px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+
+.TV h1 {
+    writing-mode: vertical-lr;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-size: 80px;
+    text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.7);
+
+}
+
+.TV h4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-size: 35px;
+}
+
+.TV_text h6 {
+    margin-bottom: 15px;
+}
+
+.TV_text {
+    margin-top: 100px;
+    padding-left: 15px;
+}
+
+.TV_text p {
+    padding-top: 10px;
+}
+
+.email_box {
+    padding: 20px;
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+    color: grey;
+    background-color: transparent;
+    border: 1px solid #121212;
+    outline: none;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.7);
+}
+
+.email_box:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 5px #9a0404;
+    border: 1px solid #9a0404;
+    transition: all 0.3s
+}
+
+
+/*Footer*/
+footer {
+    background-color: #121212;
+    height: 320px;
+    width: 100%;
+    color: #eaeaea;
+    font-size: 18px;
+    align-content: center;
+    position: relative;
+}
+
+
+.footer_inner {
+    width: 1320px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    align-content: center;
+    z-index: 5;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_inner ul {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.footer_inner ul li {
+    padding-right: 15px;
+}
+
+.footer_left ul li a:hover {
+    font-weight: bold;
+}
+
+.footer_logo {
+    position: absolute;
+    left: 43%;
+    bottom: 130px;
+}
+
+.footer_icons {
+    align-content: center;
+}
+
+.footer_icons ul li {
+    position: relative;
+}
+
+.footer_icons ul li :hover .hover {
+    opacity: 1;
+}
+
+.footer_LP {
+    position: absolute;
+    top: -230px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 550px;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.footer_LP img {
+    animation: rotation 7s linear infinite;
+    overflow: hidden;
+}
+
+.top_btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.top_btn h1 {
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+    color: #9a0404;
+    font-size: 20px
+}

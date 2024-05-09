@@ -1,0 +1,530 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img,
+video,
+iframe {
+    align-items: center;
+}
+
+/*FONTS*/
+.josefin-sans {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.unifrakturmaguntia-regular {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*FONTS*/
+body {
+    min-width: 1600px;
+    font-size: 20px;
+    line-height: normal;
+    font-family: "Josefin Sans", sans-serif;
+    color: #121212;
+    background-image: url(../images/paper_bg.png);
+
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #121212;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #9a0404;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #121212;
+    /* creates padding around scroll thumb */
+}
+
+@keyframes up_and_down {
+    0% {
+        transform: translateY(25px);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(25px);
+    }
+}
+
+@keyframes up_and_down_2 {
+    0% {
+        transform: translateY(100px);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+@keyframes up_and_down_3 {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes text_animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #ffffff,
+            0 0 40px #ffffff,
+            0 0 80px #c90000,
+            0 0 90px #c90000,
+            0 0 100px #c90000,
+            0 0 150px #c90000;
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+/*HEADER*/
+header {
+    color: #eaeaea;
+    background-color: #121212;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    align-content: center;
+
+}
+
+.header_inner {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.right_header ul {
+    display: flex;
+
+}
+
+.right_header ul li {
+    padding-right: 60px;
+}
+
+.left_header ul {
+    display: flex;
+
+}
+
+.left_header ul li {
+    padding-right: 60px;
+}
+
+
+.icons_header {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.icons_header ul {
+    display: flex;
+    padding-right: 80px;
+}
+
+.icons_header ul li {
+    padding-right: 25px;
+}
+
+.right_header ul li a:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 3px #9a0404;
+    transition: all 0.5s;
+}
+
+.left_header ul li a:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 3px #9a0404;
+    transition: all 0.5s;
+}
+
+.cart {
+    position: relative;
+}
+
+.login {
+    position: relative;
+}
+
+.icons_header ul li {
+    position: relative;
+}
+
+.icons_header ul li :hover .hover {
+    opacity: 1;
+}
+
+.login:hover .hover {
+    opacity: 1;
+}
+
+.hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+
+    right: 10px;
+    padding: 30px;
+    color: #9a0404 !important;
+    fill: #9a0404 !important;
+    stroke: #9a0404 !important;
+}
+
+
+.cheers {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    align-items: center;
+}
+
+.cheers_video video {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 25px;
+}
+
+/*food animation img*/
+.food_animation {
+    overflow: hidden;
+
+
+}
+
+.ani_wrapper {
+    display: flex;
+    width: 10000px;
+    animation: text_animation 50s linear infinite;
+}
+
+.ani {
+    display: flex;
+    width: 5000px;
+    justify-content: space-around;
+
+}
+
+
+/*food animation img END*/
+/*text animation*/
+.text_slide {
+    overflow: hidden;
+
+}
+
+.text_wrapper {
+    display: flex;
+    width: 10000px;
+    animation: text_animation2 reverse 50s linear infinite;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.text_box {
+    display: flex;
+    width: 5000px;
+    justify-content: space-around;
+
+}
+
+.text_box h1 {
+    font-size: 80px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+    font-weight: lighter;
+    font-family: "UnifrakturMaguntia",
+        cursive;
+    padding-bottom: 30px;
+
+}
+
+@keyframes text_animation2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.sip_listen {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    align-items: center;
+}
+
+.sip_video video {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 15px 25px;
+}
+
+.text1 {
+    text-align: left;
+    width: 600px;
+    padding-left: 50px;
+
+}
+
+.text2 {
+    text-align: right;
+    width: 600px;
+
+}
+
+.text1 h1,
+.text2 h1 {
+    font-family: "UnifrakturMaguntia", cursive;
+    padding: 20px;
+    font-size: 50px;
+}
+
+.text1 h5,
+.text2 h5 {
+    font-size: 20px;
+    line-height: 50px;
+    padding: 30px;
+}
+
+.menu {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 300px;
+    text-align: center;
+    align-content: center;
+}
+
+.menu a {
+    font-size: 35px;
+}
+
+.pop_up {
+    position: relative;
+    top: -250px;
+    left: -400px;
+    display: none;
+    z-index: 20;
+    align-content: center;
+
+}
+
+.res_btn {
+    margin-top: 100px;
+}
+
+.pop_up span {
+    display: block;
+    padding-right: 10px;
+    font-family: "UnifrakturMaguntia", cursive;
+}
+
+.pop_up p {
+    position: relative;
+    right: -900px;
+    font-size: 35px;
+
+}
+
+.pop_up a:hover {
+    font-weight: bold;
+}
+
+.wrap a,
+.res_btn a {
+    font-family: "UnifrakturMaguntia", cursive;
+    width: 250px;
+    margin-top: 40px;
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.wrap a:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 5px #9a0404;
+}
+
+.res_btn a:hover {
+    color: #9a0404;
+    text-shadow: 2px 2px 5px #9a0404;
+}
+
+/*Footer*/
+footer {
+    background-color: #121212;
+    height: 320px;
+    width: 100%;
+    color: #eaeaea;
+    font-size: 18px;
+    align-content: center;
+    position: relative;
+
+}
+
+.footer_inner {
+    width: 1320px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    align-content: center;
+    z-index: 5;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_inner ul {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.footer_inner ul li {
+    padding-right: 15px;
+}
+
+.footer_left ul li a:hover {
+    font-weight: bold;
+}
+
+.footer_logo {
+    position: absolute;
+    left: 43%;
+    bottom: 130px;
+}
+
+.footer_icons {
+    align-content: center;
+}
+
+.footer_icons ul li {
+    position: relative;
+}
+
+.footer_icons ul li :hover .hover {
+    opacity: 1;
+}
+
+.footer_LP {
+    position: absolute;
+    top: -230px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 550px;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.footer_LP img {
+    animation: rotation 7s linear infinite;
+    overflow: hidden;
+}
